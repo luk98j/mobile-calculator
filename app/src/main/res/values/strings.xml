@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">mobile-calculator</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="simple_calculator">Kalkulator prosty</string>
+    <string name="advanced_calculator">Kalkulator zaawansowany</string>
+    <string name="info">Informacje</string>
+    <string name="close_app">Wyjście</string>
+    <string name="author">Autor: Jankowski Lukasz</string>
+    <string name="index">224816</string>
+    <string name="app_description">Aplikacja to kalkulator dzieki, ktoremu policzymy wszystkie nasze wyrazenia</string>
+</resources>

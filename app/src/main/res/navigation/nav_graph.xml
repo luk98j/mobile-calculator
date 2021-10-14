@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/Menu">
+
+    <fragment
+        android:id="@+id/Menu"
+        android:name="com.example.mobile_calculator.MenuFragment"
+        android:label="Menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_Menu_to_SecondFragment"
+            app:destination="@id/InfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/InfoFragment"
+        android:name="com.example.mobile_calculator.InfoFragment"
+        android:label="Informacje"
+        tools:layout="@layout/fragment_info" />
+</navigation>

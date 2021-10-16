@@ -10,13 +10,26 @@
         android:name="com.example.mobile_calculator.MenuFragment"
         android:label="Menu"
         tools:layout="@layout/fragment_menu" >
+
         <action
             android:id="@+id/action_Menu_to_SecondFragment"
             app:destination="@id/InfoFragment" />
+
+        <action
+            android:id="@+id/action_Menu_to_SimplyCalculatorFragment"
+            app:destination="@id/SimplyCalculatorFragment" />
+
     </fragment>
+
     <fragment
         android:id="@+id/InfoFragment"
         android:name="com.example.mobile_calculator.InfoFragment"
         android:label="Informacje"
         tools:layout="@layout/fragment_info" />
+
+    <fragment
+        android:id="@+id/SimplyCalculatorFragment"
+        android:name="com.example.mobile_calculator.SimplyCalculatorFragment"
+        android:label="Kalkulator prosty"
+        tools:layout="@layout/fragment_simply_calculator" />
 </navigation>

@@ -48,6 +48,14 @@ public class MenuFragment extends Fragment {
                         .navigate(R.id.action_Menu_to_SecondFragment);
             }
         });
+
+        binding.simplyCalculator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(MenuFragment.this)
+                        .navigate(R.id.action_Menu_to_SimplyCalculatorFragment);
+            }
+        });
     }
 
     @Override

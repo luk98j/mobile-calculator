@@ -56,6 +56,14 @@ public class MenuFragment extends Fragment {
                         .navigate(R.id.action_Menu_to_SimplyCalculatorFragment);
             }
         });
+
+        binding.advancedCalculator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(MenuFragment.this)
+                        .navigate(R.id.action_Menu_to_AdvancedCalculatorFragment);
+            }
+        });
     }
 
     @Override

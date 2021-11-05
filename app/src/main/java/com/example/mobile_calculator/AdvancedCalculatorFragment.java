@@ -13,14 +13,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.mobile_calculator.databinding.FragmentSimplyCalculatorBinding;
+import com.example.mobile_calculator.databinding.FragmentAdvancedCalculatorBinding;
 
-public class SimplyCalculatorFragment extends Fragment {
-
-    private FragmentSimplyCalculatorBinding fragmentSimplyCalculatorBinding;
+public class AdvancedCalculatorFragment extends Fragment {
+    private FragmentAdvancedCalculatorBinding advancedCalculatorBinding;
     private Button button0, button1, button2, button3, button4, button5, button6,
             button7, button8, button9, buttonAdd, buttonSubstring, buttonDivision,
-            buttonMultiply, buttonDot, buttonC, buttonEquals, buttonAC;
+            buttonMultiply, buttonDot, buttonC, buttonEquals, buttonAC, buttonProcent,
+            buttonSin, buttonCos, buttonTanges, buttonSqrt, buttonLn,
+            buttonLog,buttonX2, buttonXY;
     private TextView textView;
     private TextView viewOfNumbers;
     private Float mValueOne;
@@ -31,7 +32,7 @@ public class SimplyCalculatorFragment extends Fragment {
     private String textViewStr;
     private String viewOfNumbersStr;
 
-//    private boolean addition, substract, multiply, divide;
+    //    private boolean addition, substract, multiply, divide;
     private Character mathSign;
     @Override
     public View onCreateView(
@@ -39,8 +40,8 @@ public class SimplyCalculatorFragment extends Fragment {
             Bundle savedInstanceState
     ) {
         context = container.getContext();
-        fragmentSimplyCalculatorBinding = FragmentSimplyCalculatorBinding.inflate(inflater, container, false);
-        return fragmentSimplyCalculatorBinding.getRoot();
+        advancedCalculatorBinding = FragmentAdvancedCalculatorBinding.inflate(inflater, container, false);
+        return advancedCalculatorBinding.getRoot();
 
     }
 
@@ -81,6 +82,15 @@ public class SimplyCalculatorFragment extends Fragment {
         buttonEquals = (Button) view.findViewById(R.id.buttonEquals);
         textView = (TextView) view.findViewById(R.id.textView);
         viewOfNumbers = (TextView) view.findViewById(R.id.viewOfNumbers);
+        buttonProcent = (Button) view.findViewById(R.id.buttonProcent);
+        buttonSin = (Button) view.findViewById(R.id.buttonSin);
+        buttonCos = (Button) view.findViewById(R.id.buttonCos);
+        buttonTanges = (Button) view.findViewById(R.id.buttonTanges);
+        buttonSqrt = (Button) view.findViewById(R.id.buttonSqrt);
+        buttonLn = (Button) view.findViewById(R.id.buttonLn);
+        buttonLog = (Button) view.findViewById(R.id.buttonLog);
+        buttonX2 = (Button) view.findViewById(R.id.buttonX2);
+        buttonXY = (Button) view.findViewById(R.id.buttonXY);
 
 
         button1.setOnClickListener(new View.OnClickListener() {
@@ -209,6 +219,141 @@ public class SimplyCalculatorFragment extends Fragment {
             }
         });
 
+        buttonProcent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (textView == null) {
+                    textView.setText("");
+                } else {
+                    mValueOne = Float.parseFloat(textView.getText() + "");
+                    mathSign = '%';
+                    viewOfNumbers.setText(mValueOne + "%");
+                    textView.setText(null);
+                }
+            }
+        });
+
+        buttonSin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(textView == null){
+                    textView.setText("");
+                } else {
+                    mValueOne = Float.parseFloat(textView.getText() + "");
+                    viewOfNumbers.setText("sin("+mValueOne+")");
+                    double newVariable = Math.sin(Double.valueOf(mValueOne));
+                    mValueOne = (float) newVariable;
+                    textView.setText(mValueOne+"");
+                }
+            }
+        });
+
+        buttonCos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(textView == null){
+                    textView.setText("");
+                } else {
+                    mValueOne = Float.parseFloat(textView.getText() + "");
+                    viewOfNumbers.setText("cos("+mValueOne+")");
+                    double newVariable = Math.cos(Double.valueOf(mValueOne));
+                    mValueOne = (float) newVariable;
+                    textView.setText(mValueOne+"");
+                }
+            }
+        });
+
+        buttonTanges.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(textView == null){
+                    textView.setText("");
+                } else {
+                    mValueOne = Float.parseFloat(textView.getText() + "");
+                    viewOfNumbers.setText("tan("+mValueOne+")");
+                    double newVariable = Math.tan(Double.valueOf(mValueOne));
+                    mValueOne = (float) newVariable;
+                    textView.setText(mValueOne+"");
+                }
+            }
+        });
+
+        buttonSqrt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(textView == null){
+                    textView.setText("");
+                } else {
+                    mValueOne = Float.parseFloat(textView.getText() + "");
+                    viewOfNumbers.setText("sqrt("+mValueOne+")");
+                    double newVariable = Math.sqrt(Double.valueOf(mValueOne));
+                    mValueOne = (float) newVariable;
+                    textView.setText(mValueOne+"");
+                }
+            }
+        });
+
+        buttonLog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(textView == null){
+                    textView.setText("");
+                } else {
+                    mValueOne = Float.parseFloat(textView.getText() + "");
+                    viewOfNumbers.setText("log("+mValueOne+")");
+                    double newVariable = Math.log10(Double.valueOf(mValueOne));
+                    mValueOne = (float) newVariable;
+                    textView.setText(mValueOne+"");
+                }
+            }
+        });
+
+        buttonLn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(textView == null){
+                    textView.setText("");
+                } else {
+                    mValueOne = Float.parseFloat(textView.getText() + "");
+                    viewOfNumbers.setText("ln("+mValueOne+")");
+                    double newVariable = Math.log(Double.valueOf(mValueOne));
+                    mValueOne = (float) newVariable;
+                    textView.setText(mValueOne+"");
+                }
+            }
+        });
+
+        buttonX2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(textView == null){
+                    textView.setText("");
+                } else {
+                    mValueOne = Float.parseFloat(textView.getText() + "");
+                    viewOfNumbers.setText("("+mValueOne+")^2");
+                    double newVariable = Math.pow(Double.valueOf(mValueOne),2);
+                    mValueOne = (float) newVariable;
+                    textView.setText(mValueOne+"");
+                }
+            }
+        });
+
+        buttonXY.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(textView == null){
+                    textView.setText("");
+                } else {
+                    Math.pow()
+//                    mValueOne = Float.parseFloat(textView.getText() + "");
+//                    viewOfNumbers.setText("("+mValueOne+")^2");
+//                    double newVariable = Math.pow(Double.valueOf(mValueOne),2);
+//                    mValueOne = (float) newVariable;
+//                    textView.setText(mValueOne+"");
+                }
+            }
+        });
+
         buttonEquals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -239,6 +384,11 @@ public class SimplyCalculatorFragment extends Fragment {
                             }
 
                         }
+                        if(mathSign == '%'){
+
+                        }
+
+
                     }
                 }
             }

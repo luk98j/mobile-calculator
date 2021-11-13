@@ -8,23 +8,20 @@
     >
 
     <LinearLayout
-        android:layout_width="382dp"
-        android:layout_height="351dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="10dp"
+        android:layout_width="620dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="18dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/viewOfNumbers"
             android:layout_width="match_parent"
-            android:layout_height="290dp"
+            android:layout_height="96dp"
             android:drawableBottom="@android:color/black"
             android:gravity="bottom|right"
             android:textSize="34sp"
@@ -37,6 +34,7 @@
             android:drawableBottom="@android:color/black"
             android:gravity="bottom|right"
             android:textSize="34sp" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -54,94 +52,10 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/buttonAC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="AC" />
-
-            <Button
-                android:id="@+id/buttonC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="C" />
-
-            <Button
-                android:id="@+id/buttonX2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="X^2" />
-            <Button
-                android:id="@+id/buttonXY"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="X^y" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <Button
                 android:id="@+id/buttonSin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sin" />
-
-            <Button
-                android:id="@+id/buttonCos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cos" />
-
-            <Button
-                android:id="@+id/buttonTanges"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tan" />
-            <Button
-                android:id="@+id/buttonSqrt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="sqrt" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/buttonLn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="LN" />
-
-            <Button
-                android:id="@+id/buttonLog"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Log" />
-
-
-            <Button
-                android:id="@+id/buttonProcent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="%" />
-            <Button
-                android:id="@+id/buttonDivision"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="/" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
             <Button
                 android:id="@+id/button7"
                 android:layout_width="wrap_content"
@@ -165,6 +79,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="*" />
+            <Button
+                android:id="@+id/buttonAC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AC" />
+            <Button
+                android:id="@+id/buttonLn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LN" />
 
         </LinearLayout>
 
@@ -173,6 +97,11 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
+            <Button
+                android:id="@+id/buttonCos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cos" />
             <Button
                 android:id="@+id/button4"
                 android:layout_width="wrap_content"
@@ -196,6 +125,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="-" />
+            <Button
+                android:id="@+id/buttonC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C" />
+            <Button
+                android:id="@+id/buttonLog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log" />
 
         </LinearLayout>
 
@@ -203,7 +142,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
-
+            <Button
+                android:id="@+id/buttonTanges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tan" />
             <Button
                 android:id="@+id/button1"
                 android:layout_width="wrap_content"
@@ -227,6 +170,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+" />
+            <Button
+                android:id="@+id/buttonProcent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%" />
+            <Button
+                android:id="@+id/buttonX2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X^2" />
 
         </LinearLayout>
 
@@ -234,7 +187,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
-
+            <Button
+                android:id="@+id/buttonSqrt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sqrt" />
             <Button
                 android:id="@+id/buttonPlusMinus"
                 android:layout_width="wrap_content"
@@ -258,6 +215,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="=" />
+            <Button
+                android:id="@+id/buttonDivision"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/" />
+            <Button
+                android:id="@+id/buttonXY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X^y" />
 
         </LinearLayout>
     </LinearLayout>

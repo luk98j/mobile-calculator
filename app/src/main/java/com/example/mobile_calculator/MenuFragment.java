@@ -33,14 +33,6 @@ public class MenuFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-//        binding.simplyCalculator.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                NavHostFragment.findNavController(MenuFragment.this)
-//                        .navigate(R.id.);
-//            }
-//        });
-
         binding.infoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,6 +54,12 @@ public class MenuFragment extends Fragment {
             public void onClick(View v) {
                 NavHostFragment.findNavController(MenuFragment.this)
                         .navigate(R.id.action_Menu_to_AdvancedCalculatorFragment);
+            }
+        });
+        binding.exitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.exit(0);
             }
         });
     }

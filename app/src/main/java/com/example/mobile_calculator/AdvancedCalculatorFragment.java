@@ -87,37 +87,7 @@ public class AdvancedCalculatorFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
-        button0 = view.findViewById(R.id.button0);
-        button1 = view.findViewById(R.id.button1);
-        button2 = view.findViewById(R.id.button2);
-        button3 = view.findViewById(R.id.button3);
-        button4 = view.findViewById(R.id.button4);
-        button5 = view.findViewById(R.id.button5);
-        button6 = view.findViewById(R.id.button6);
-        button7 = view.findViewById(R.id.button7);
-        button8 = view.findViewById(R.id.button8);
-        button9 = view.findViewById(R.id.button9);
-        buttonSubstring = view.findViewById(R.id.buttonSubstring);
-        buttonAdd =  view.findViewById(R.id.buttonAdd);
-        buttonMultiply =  view.findViewById(R.id.buttonMultiply);
-        buttonDivision =  view.findViewById(R.id.buttonDivision);
-        buttonC =  view.findViewById(R.id.buttonC);
-        buttonAC =  view.findViewById(R.id.buttonAC);
-        buttonDot =  view.findViewById(R.id.buttonDot);
-        buttonEquals = view.findViewById(R.id.buttonEquals);
-        textView = view.findViewById(R.id.textView);
-        viewOfNumbers =  view.findViewById(R.id.viewOfNumbers);
-        buttonProcent =  view.findViewById(R.id.buttonProcent);
-        buttonSin =  view.findViewById(R.id.buttonSin);
-        buttonCos =  view.findViewById(R.id.buttonCos);
-        buttonTanges =  view.findViewById(R.id.buttonTanges);
-        buttonSqrt =  view.findViewById(R.id.buttonSqrt);
-        buttonLn =  view.findViewById(R.id.buttonLn);
-        buttonLog =  view.findViewById(R.id.buttonLog);
-        buttonX2 =  view.findViewById(R.id.buttonX2);
-        buttonXY =  view.findViewById(R.id.buttonXY);
-        buttonPlusMinus =  view.findViewById(R.id.buttonPlusMinus);
-
+        loadButtons(view);
         if(savedInstanceState!=null){
             mValueOne = savedInstanceState.getFloat("mValueOne");
             mValueTwo = savedInstanceState.getFloat("mValueTwo");
@@ -522,5 +492,39 @@ public class AdvancedCalculatorFragment extends Fragment {
         } else {
             return "";
         }
+    }
+
+    private void loadButtons(View view){
+        button0 = view.findViewById(R.id.button0);
+        button1 = view.findViewById(R.id.button1);
+        button2 = view.findViewById(R.id.button2);
+        button3 = view.findViewById(R.id.button3);
+        button4 = view.findViewById(R.id.button4);
+        button5 = view.findViewById(R.id.button5);
+        button6 = view.findViewById(R.id.button6);
+        button7 = view.findViewById(R.id.button7);
+        button8 = view.findViewById(R.id.button8);
+        button9 = view.findViewById(R.id.button9);
+        buttonSubstring = view.findViewById(R.id.buttonSubstring);
+        buttonAdd =  view.findViewById(R.id.buttonAdd);
+        buttonMultiply =  view.findViewById(R.id.buttonMultiply);
+        buttonDivision =  view.findViewById(R.id.buttonDivision);
+        buttonC =  view.findViewById(R.id.buttonC);
+        buttonAC =  view.findViewById(R.id.buttonAC);
+        buttonDot =  view.findViewById(R.id.buttonDot);
+        buttonEquals = view.findViewById(R.id.buttonEquals);
+        textView = view.findViewById(R.id.textView);
+        viewOfNumbers =  view.findViewById(R.id.viewOfNumbers);
+        buttonProcent =  view.findViewById(R.id.buttonProcent);
+        buttonSin =  view.findViewById(R.id.buttonSin);
+        buttonCos =  view.findViewById(R.id.buttonCos);
+        buttonTanges =  view.findViewById(R.id.buttonTanges);
+        buttonSqrt =  view.findViewById(R.id.buttonSqrt);
+        buttonLn =  view.findViewById(R.id.buttonLn);
+        buttonLog =  view.findViewById(R.id.buttonLog);
+        buttonX2 =  view.findViewById(R.id.buttonX2);
+        buttonXY =  view.findViewById(R.id.buttonXY);
+        buttonPlusMinus =  view.findViewById(R.id.buttonPlusMinus);
+
     }
 }

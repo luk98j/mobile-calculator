@@ -63,27 +63,7 @@ public class SimplyCalculatorFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
-        button0 = (Button) view.findViewById(R.id.button0);
-        button1 = (Button) view.findViewById(R.id.button1);
-        button2 = (Button) view.findViewById(R.id.button2);
-        button3 = (Button) view.findViewById(R.id.button3);
-        button4 = (Button) view.findViewById(R.id.button4);
-        button5 = (Button) view.findViewById(R.id.button5);
-        button6 = (Button) view.findViewById(R.id.button6);
-        button7 = (Button) view.findViewById(R.id.button7);
-        button8 = (Button) view.findViewById(R.id.button8);
-        button9 = (Button) view.findViewById(R.id.button9);
-        buttonSubstring = (Button) view.findViewById(R.id.buttonSubstring);
-        buttonAdd = (Button) view.findViewById(R.id.buttonAdd);
-        buttonMultiply = (Button) view.findViewById(R.id.buttonMultiply);
-        buttonDivision = (Button) view.findViewById(R.id.buttonDivision);
-        buttonC = (Button) view.findViewById(R.id.buttonC);
-        buttonAC = (Button) view.findViewById(R.id.buttonAC);
-        buttonDot = (Button) view.findViewById(R.id.buttonDot);
-        buttonEquals = (Button) view.findViewById(R.id.buttonEquals);
-        textView = (TextView) view.findViewById(R.id.textView);
-        viewOfNumbers = (TextView) view.findViewById(R.id.viewOfNumbers);
-        buttonPlusMinus = (Button) view.findViewById(R.id.buttonPlusMinus);
+        loadButtons(view);
         if(savedInstanceState!=null){
             mValueOne = savedInstanceState.getFloat("mValueOne");
             mValueTwo = savedInstanceState.getFloat("mValueTwo");
@@ -341,5 +321,29 @@ public class SimplyCalculatorFragment extends Fragment {
         } else {
             return "";
         }
+    }
+
+    private void loadButtons(View view){
+        button0 = (Button) view.findViewById(R.id.button0);
+        button1 = (Button) view.findViewById(R.id.button1);
+        button2 = (Button) view.findViewById(R.id.button2);
+        button3 = (Button) view.findViewById(R.id.button3);
+        button4 = (Button) view.findViewById(R.id.button4);
+        button5 = (Button) view.findViewById(R.id.button5);
+        button6 = (Button) view.findViewById(R.id.button6);
+        button7 = (Button) view.findViewById(R.id.button7);
+        button8 = (Button) view.findViewById(R.id.button8);
+        button9 = (Button) view.findViewById(R.id.button9);
+        buttonSubstring = (Button) view.findViewById(R.id.buttonSubstring);
+        buttonAdd = (Button) view.findViewById(R.id.buttonAdd);
+        buttonMultiply = (Button) view.findViewById(R.id.buttonMultiply);
+        buttonDivision = (Button) view.findViewById(R.id.buttonDivision);
+        buttonC = (Button) view.findViewById(R.id.buttonC);
+        buttonAC = (Button) view.findViewById(R.id.buttonAC);
+        buttonDot = (Button) view.findViewById(R.id.buttonDot);
+        buttonEquals = (Button) view.findViewById(R.id.buttonEquals);
+        textView = (TextView) view.findViewById(R.id.textView);
+        viewOfNumbers = (TextView) view.findViewById(R.id.viewOfNumbers);
+        buttonPlusMinus = (Button) view.findViewById(R.id.buttonPlusMinus);
     }
 }
